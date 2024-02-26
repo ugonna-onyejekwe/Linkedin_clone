@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: var(--container-color);
+  color: var(--text-color);
+}
+
+:root {
+  --first-color: #0a66c2;
+  --first-color-alt: #0a4a8b;
+  --first-color-light: rgba(10, 102, 194, 0.146);
+  --white: #ffffff;
+  --text-color: #404040;
+  --title-color: #191919;
+  --container-color: #f4f2ee;
+  --container-hover-color: #ede4dc;
+  --border-color: rgb(217, 214, 214);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+}
+
+p {
+  font-size: 13px;
+}
+
+.container {
+  max-width: 1400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  h1 {
+    color: var(--first-color);
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    text-transform: capitalize;
+    font-size: 25px;
+
+    .icon {
+      color: var(--first-color) !important;
+    }
+  }
+}
+
+.advert1_container {
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+
+  h5 {
+    text-transform: capitalize;
+    font-size: 15px;
+    width: 100%;
+    font-weight: 500;
+    text-align: right;
+    padding-bottom: 15px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .img_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+
+    .img_con {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .icon {
+      font-size: 50px;
+      line-height: 0;
+      color: rgb(173, 151, 25);
+    }
+  }
+  h4 {
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      padding: 10px 20px;
+      border: 1px solid var(--text-color);
+      border-radius: 30px;
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 500;
+      background: transparent;
+      cursor: pointer;
+      transition: 0, 4s ease;
+
+      &:hover {
+        color: var(--first-color);
+        border-color: var(--first-color);
+      }
+    }
+  }
+}
+
+.ad2_container {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+  background: url("./assets//ad-img.webp");
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 1;
+    opacity: 0.6;
+  }
+
+  .txt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px;
+    z-index: 2;
+
+    h1 {
+      font-size: 20px;
+      background: #b37212;
+      text-transform: capitalize;
+      color: var(--white);
+      font-weight: 700;
+      padding: 10px;
+    }
+
+    h5 {
+      font-size: 15px;
+      background: #b37212;
+      text-transform: capitalize;
+      color: var(--white);
+      font-weight: 600;
+      margin-top: 5px;
+      padding: 10px;
+      width: fit-content;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .advert1_container {
+    padding: 20px;
+
+    h5 {
+      font-size: 13px;
+    }
+
+    .img_wrapper {
+      .img_con {
+        width: 50px;
+        height: 50px;
+      }
+
+      .icon {
+        font-size: 30px;
+      }
+    }
+
+    h4 {
+      font-size: 13px;
+    }
+
+    .btn {
+      button {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .ad2_container {
+    .txt {
+      padding: 20px;
+
+      h1 {
+        font-size: 18px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 90%;
+  }
+  p {
+    font-size: 13px;
+  }
+}

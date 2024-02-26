@@ -1,0 +1,218 @@
+.jobs_container {
+  padding-top: 100px;
+  .container {
+    display: flex;
+    gap: 20px;
+
+    .left_side,
+    .right_side {
+      flex: 1;
+    }
+    .center_content {
+      flex: 2;
+    }
+
+    .left_side {
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: var(--white);
+      height: fit-content;
+      overflow: hidden;
+      cursor: pointer;
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+        button {
+          display: none;
+          padding: 10px 20px;
+          text-transform: capitalize;
+          font-size: 13px;
+          border-radius: 5px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: 0.4s ease;
+          background: var(--container-color);
+
+          &:hover {
+            background: var(--container-hover-color);
+          }
+        }
+      }
+
+      h5 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-color);
+        padding: 15px 20px;
+
+        &:hover {
+          color: var(--title-color);
+        }
+
+        span {
+          font-size: 20px;
+          line-height: 0;
+        }
+      }
+    }
+
+    .center_content {
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      .heading {
+        padding: 20px;
+        h5 {
+          text-transform: capitalize;
+          font-size: 15px;
+        }
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-top: 1px solid var(--border-color);
+        justify-content: space-between;
+        .wrapper {
+          display: flex;
+          gap: 10px;
+
+          .img_con {
+            width: 90px;
+            height: 90px;
+            border-radius: 5px;
+            overflow: hidden;
+          }
+          .txt_con {
+            h5 {
+              text-transform: capitalize;
+              font-weight: 600;
+              font-size: 15px;
+            }
+            small {
+              text-transform: capitalize;
+              font-size: 13px;
+              font-weight: 500;
+            }
+            p {
+              text-transform: capitalize;
+              padding-top: 5px;
+
+              &.active {
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                span {
+                  font-size: 20px;
+                  color: green;
+                  line-height: 0;
+                }
+              }
+            }
+            .date {
+              display: flex;
+              gap: 10px;
+              margin-top: 10px;
+              span {
+                font-size: 12px;
+              }
+            }
+            .date span:nth-child(2) {
+              color: green;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .remove_icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .jobs_container .container {
+    .right_side {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .jobs_container .container {
+    flex-direction: column;
+    .left_side .head button{
+        display: block;
+    }
+  }
+}
+
+@media (max-width:425px) {
+    .jobs_container .container{
+  
+    .center_content {
+ 
+      .heading {
+        padding: 20px;
+        h5 {
+          text-transform: capitalize;
+          font-size: 14px;
+        }
+      }
+
+      .box {
+
+        .wrapper {
+  
+
+          .img_con {
+            width: 70px;
+            height: 70px;
+         
+          }
+          .txt_con {
+            h5 {
+    
+              font-size: 14px;
+            }
+            small {
+              font-size: 13px;
+            }
+            p {
+              text-transform: capitalize;
+              padding-top: 5px;
+
+         
+            }
+            .date {
+              display: flex;
+              gap: 10px;
+              margin-top: 10px;
+              span {
+                font-size: 12px;
+              }
+            }
+            .date span:nth-child(2) {
+              color: green;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .remove_icon {
+          font-size: 20px;
+        }
+      }
+    }
+    }
+}

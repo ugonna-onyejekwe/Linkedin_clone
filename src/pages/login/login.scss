@@ -1,0 +1,294 @@
+.login_container {
+  padding-bottom: 50px;
+  min-height: fit-content;
+  height: 100%;
+
+  .nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    .logo {
+      h1 {
+        color: var(--first-color);
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+        text-transform: capitalize;
+        font-size: 25px;
+
+        .icon {
+          color: var(--first-color) !important;
+        }
+      }
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      a {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 15px;
+        color: var(--text-color);
+        padding: 15px 20px;
+        font-weight: 500;
+
+        &:last-child {
+          border: 1px solid var(--first-color);
+          border-radius: 30px;
+          color: var(--first-color);
+
+          &:hover {
+            background: var(--first-color-light);
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+
+    .txt_con {
+      width: 55%;
+
+      h1 {
+        text-transform: capitalize;
+        font-size: 45px;
+        color: #b94952;
+        font-weight: 400;
+      }
+
+      .con {
+        width: 70%;
+        margin-top: 50px;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .input_con {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            label {
+              text-transform: capitalize;
+              font-size: 15px;
+            }
+
+            input {
+              padding: 15px;
+              border-radius: 5px;
+              border: 1px solid var(--text-color);
+
+              &:focus {
+                border: 2px solid var(--text-color);
+              }
+            }
+          }
+
+          .password_con {
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+
+            button {
+              color: var(--first-color);
+              background: transparent;
+              padding: 0;
+              margin-right: 10px;
+              font-size: 13px;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 2px;
+
+              &:hover {
+                background: transparent;
+              }
+            }
+
+            input {
+              flex: 1;
+              padding-right: 50px;
+            }
+          }
+
+          .forget_pass {
+            font-weight: 500;
+            color: var(--first-color);
+          }
+
+          button {
+            padding: 15px;
+            font-size: 15px;
+            background: var(--first-color);
+            border-radius: 30px;
+            color: var(--white);
+            text-transform: capitalize;
+            font-weight: 500;
+            transition: 0.4s ease;
+            cursor: pointer;
+
+            &:hover {
+              background: var(--first-color-alt);
+            }
+          }
+        }
+
+        .divider {
+          text-align: center;
+          margin: 40px 0 20px 0;
+          position: relative;
+          font-size: 15px;
+          text-transform: capitalize;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 0.5px;
+            background: grey;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+          }
+
+          &::before {
+            left: 0;
+          }
+        }
+        .policy {
+          padding-top: 20px;
+          font-size: 13px;
+
+          a {
+            color: var(--first-color);
+          }
+        }
+
+        .action_btns {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 40px;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding: 15px;
+            flex: 1;
+            border: 1px solid var(--text-color);
+            border-radius: 40px;
+            line-height: 15px;
+            cursor: pointer;
+            background: var(--white);
+            transition: 0.4s ease;
+
+            span {
+              font-size: 20px;
+            }
+
+            &:hover {
+              background: var(--first-color-light);
+            }
+          }
+        }
+      }
+    }
+    .img_con {
+      width: 45%;
+      position: relative;
+      background: red;
+
+      img {
+        position: absolute;
+        border-radius: 50%;
+        height: 600px;
+        width: 600px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .login_container .wrapper {
+    .txt_con {
+      width: 60%;
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+    .img_con {
+      width: 40%;
+      img {
+        height: 400px;
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login_container .wrapper {
+    .txt_con {
+      width: 100%;
+
+      .con {
+        width: 100%;
+      }
+    }
+
+    .img_con {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .login_container {
+    .nav .container {
+      h1 {
+        line-height: 18px;
+        font-size: 20px;
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: 13px;
+          color: var(--text-color);
+          padding: 13px 18px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .wrapper .txt_con h1 {
+      font-size: 25px;
+    }
+  }
+}
