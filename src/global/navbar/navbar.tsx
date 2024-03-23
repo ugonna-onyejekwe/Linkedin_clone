@@ -16,15 +16,16 @@ import profile_img from "../../assets/profile_img.jpg";
 import { useState } from "react";
 
 export const Nav_bar = () => {
-  const { location: any }: any = useLocation();
+  const location = useLocation();
   const [dropdown, setDropdown] = useState(false);
 
   const { pathname } = location;
 
-  window.addEventListener("click", (e): any => {
-    console.log(e.target);
-    // e.target !==
-  });
+  // window.addEventListener("click", (e): any => {
+  //   console.log(e.target);
+  // });
+
+  console.log(pathname === "/login" || "/sign_in");
 
   const shownav = {
     display: "block",
@@ -34,7 +35,7 @@ export const Nav_bar = () => {
   };
 
   return (
-    <nav style={pathname === "/login" || "sign_in" ? shownav : hidenav}>
+    <nav style={pathname === "/login" || "/sign_in" ? hidenav : shownav}>
       <div className="container">
         <div className="part1">
           <div className="col1">

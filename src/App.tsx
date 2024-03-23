@@ -17,7 +17,9 @@ function App() {
     <>
       <Nav_bar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Navigate to="sign_up" replace />} />
+
+        <Route path="/home" element={<Home />} />
         <Route path="/network" element={<Network />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/messages" element={<Messages />}>

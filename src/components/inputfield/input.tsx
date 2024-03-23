@@ -15,6 +15,8 @@ export const Input_field = (props: Inputprops) => {
           type={showpass ? "text" : "password"}
           value={password}
           onChange={(e: any) => setPassword(e.target.value)}
+          minLength={6}
+          required
         />
         <button onClick={() => setShowpass(!showpass)}>
           {showpass ? "hide" : "show"}
@@ -27,9 +29,8 @@ export const Input_field = (props: Inputprops) => {
         type={props.type}
         value={input}
         onChange={(e: any) => setInput(e.target.value)}
+        required
       />
     );
   }
 };
-
-export const Normal_input = ({}) => {};
