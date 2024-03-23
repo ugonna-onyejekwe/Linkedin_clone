@@ -17,8 +17,8 @@ function App() {
     <>
       <Nav_bar />
       <Routes>
-        <Route index element={<Navigate to="sign_up" replace />} />
-
+        <Route  index path="/" element={<Login />} />
+        <Route path="/sign_up" element={<Sign_up />} />
         <Route path="/home" element={<Home />} />
         <Route path="/network" element={<Network />} />
         <Route path="/jobs" element={<Jobs />} />
@@ -29,9 +29,6 @@ function App() {
         </Route>
         <Route path="/notifications" element={<Notification />} />
         <Route path="/profile" element={<Profile />} />
-
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign_up" element={<Sign_up />} />
       </Routes>
     </>
   );
